@@ -25,7 +25,7 @@ function product_init() {
 		'has_archive'       => true,
 		'rewrite'           => true,
 		'query_var'         => true,
-		'menu_icon'         => 'dashicons-admin-post',
+		'menu_icon'         => 'dashicons-products',
 	) );
 
 }

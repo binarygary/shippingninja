@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Shippingninja
-Version: 0.1
-Description: Provides Reporting and Visibility for Sunn Battery
+Version: 0.1.0
+Description: Provides Reporting and Visibility for Third Party Orders from Ship Station
 Author: Gary Kovar
 Author URI: http://www.binarygary.com/
 Plugin URI: http://www.binarygary.com/
@@ -20,6 +20,11 @@ GNU General Public License for more details.
  
 You should have received a copy of the GNU General Public License
 along with Shippingninja. If not, see https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html.
-
 */
+
+$directory = plugin_dir_path( __FILE__ ) . "post-types";
+$scanned_directory = array_diff( scandir( $directory ), array( '..', '.' ) );
+foreach ( $scanned_directory as $postType ) {
+  include ( "post-types/$postType" );
+}
 
